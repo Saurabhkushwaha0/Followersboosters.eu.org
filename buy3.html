@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet">
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+  <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="follow.css">
+  <title>Enter Details </title>
+</head>
+<body oncontextmenu="return false" style="background-image: linear-gradient(to bottom, #000000, #2e0f17, #570f20, #800723, #aa001f);">
+       
+<div class="snowflakes" aria-hidden="true">
+  <div class="snowflake">
+  ❅
+  </div>
+  <div class="snowflake">
+  ❅
+  </div>
+  <div class="snowflake">
+  ❄
+  </div>
+  <div class="snowflake">
+  ❄
+  </div>
+  <div class="snowflake">
+  ❅
+  </div>
+  <div class="snowflake">
+  ❄
+  </div>
+  <div class="snowflake">
+  ❄
+  </div>
+  <div class="snowflake">
+  ❄
+  </div>
+  <div class="snowflake">
+  ❆
+  </div>
+  <div class="snowflake">
+  ❄    
+  </div>
+</div>
+
+  <section class="text-gray-600 body-font">
+    <div class="container px-5 py-24 mx-auto flex flex-col">
+      <div class="lg:w-4/6 mx-auto">
+        <div class="flex flex-col text-center w-full mb-12">
+          <h1 style="font-family: cursive; font-size: xx-large;" class="sm:text-3xl text-2xl title-font mb-4 text-red-400">FollowersBoosters</h1>
+          <p style="font-family: cursive; font-size: large; color: darkorange; " class="lg:w-2/3 mx-auto leading-relaxed text-base">Life is to Short Be Happy... </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="p-2 w-full">
+    <a href="https://www.adszeke.com/gravity/">
+    <button class="flex mx-auto text-white bg-green-500 border-0 py-2 px-8 focus:outline-none hover:bg-pink-500 rounded text-lg font-black font-weight: 50; font-serif">Don't Touch 😃</button>
+    </a>
+  </div>
+  
+  <form action="" method="POST" id="frmSubmit" >
+  <section class="text-gray-600 body-font relative">
+    <div class="container px-5 py-24 mx-auto">
+      <div class="lg:w-1/2 md:w-2/3 mx-auto">
+        <div class="flex flex-wrap -m-2">
+          <div class="p-2 w-1/2">
+            <div class="relative">
+              <label  for="name" class="leading-7 text-sm text-white font-black font-weight: 50; font-serif required ">Username</label>
+              <input type="text" id="name" name="name" required class="w-full bg-black bg-opacity-50 rounded border border-red-400 focus:border-red-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+            </div>
+          </div>
+          <div class="p-2 w-1/2">
+            <div class="relative">
+              <label for="email" class="leading-7 text-sm text-white font-black font-weight: 50; font-serif ">Email</label>
+              <input type="email" id="email" name="email" required class="w-full bg-black bg-opacity-50 rounded border border-red-400 focus:border-red-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+            </div>
+          </div>
+          
+          
+
+          <div class="p-2 w-full">
+            <button type="submit" id="btnSubmit" class="flex mx-auto text-white bg-green-500 border-0 py-2 px-8 focus:outline-none hover:bg-pink-500 rounded text-lg font-black font-weight: 50; font-serif">Proceed to Checkout</button>
+          </div>
+          <div id="msg"></div>
+        </form>
+          
+         
+        </div>
+      </div>
+    </div>
+    <script>
+      jQuery('#frmSubmit').on('submit',function(e){
+      e.preventDefault();
+      jQuery('#msg').html('Please wait...');
+      jQuery('#btnSubmit').attr('disabled',true);
+      jQuery.ajax({
+        url:'https://script.google.com/macros/s/AKfycbwdoEqTU6ReZMhok-6cMpQDeXMFpU4YJEoUagmzrhlv1wIuEIF7q9NL-qJAwj3WVZb3/exec',
+        type:'post',
+        data:jQuery('#frmSubmit').serialize(),
+        success:function(result){
+          jQuery('#frmSubmit')[0].reset();
+          jQuery('#msg').html('Thank You');
+          jQuery('#btnSubmit').attr('disabled',false);
+          window.location.href="pay.html";
+        }
+      });
+      });
+      </script>
+
+
+ 
+  </script>
+
+</body>
+</html>
